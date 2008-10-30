@@ -1,0 +1,23 @@
+httperf --timeout=1 --client=0/1 --server=server --port=80 --uri=/uri/to/test --send-buffer=4096 --recv-buffer=16384 --method=GET --num-conns=1 --num-calls=1
+Maximum connect burst length: 0
+
+Total: connections 1 requests 1 replies 1 test-duration 0.173 s
+
+Connection rate: 5.8 conn/s (172.7 ms/conn, <%= '<=' %>1 concurrent connections)
+Connection time [ms]: min 172.7 avg 172.7 max 172.7 median 172.5 stddev 0.0
+Connection time [ms]: connect 0.2
+Connection length [replies/conn]: 1.000
+
+Request rate: <%= @request_rate %> req/s (172.7 ms/req)
+Request size [B]: 138.0
+
+Reply rate [replies/s]: min 0.0 avg 0.0 max 0.0 stddev 0.0 (0 samples)
+Reply time [ms]: response 172.5 transfer 0.0
+Reply size [B]: header 575.0 content 133.0 footer 0.0 (total 708.0)
+Reply status: 1xx=0 2xx=0 3xx=1 4xx=0 5xx=0
+
+CPU time [s]: user 0.04 system 0.12 (user 21.4% system 70.6% total 92.0%)
+Net I/O: 4.8 KB/s (0.0*10^6 bps)
+
+Errors: total <%= @errors %> client-timo 0 socket-timo 0 connrefused 0 connreset 0
+Errors: fd-unavail 0 addrunavail 0 ftab-full 0 other 0
