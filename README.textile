@@ -16,3 +16,8 @@ h2. Usage
       end
     end
 
+h2. Requirements
+
+* httperf
+* web server
+
