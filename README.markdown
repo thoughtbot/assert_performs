@@ -1,9 +1,9 @@
-h1. Assert Performs
+# Assert Performs
 
 This is a single Test::Unit assertion written to test performance of 
 a Rails action. Meant to be run on staging before production deploys.
 
-h2. Usage
+## Usage
 
     class PerformanceTest < Test::Unit::TestCase
       self.performance_server = "staging.example.com"
@@ -23,10 +23,9 @@ assert_performs takes the following arguments:
 * a threshold request rate (req/s)
 * a timeout (in seconds)
 
-
     assert_performs :get, '/', :rate => 3, :timeout => 5
 
-h2. Requirements
+## Requirements
 
 * httperf
 * web server
